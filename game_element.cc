@@ -1,4 +1,3 @@
-  
 #include "game_element.h"
 
 #include "cpputils/graphics/image.h"
@@ -21,3 +20,4 @@ bool GameElement::IsOutOfBounds(const graphics::Image &back) {
     return false;
   }
 }
+

@@ -13,8 +13,8 @@ Diagnostics:
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         '''stddef.h'' file not found'
-    FileOffset:      1165
-    FilePath:        /usr/include/wchar.h
+    FileOffset:      1334
+    FilePath:        '/usr/lib/gcc/x86_64-linux-gnu/7.5.0/../../../../include/c++/7.5.0/bits/cxxabi_init_exception.h'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         '''stddef.h'' file not found'

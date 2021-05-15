@@ -1,6 +1,7 @@
 #ifndef GAME_ELEMENT_H
 #define GAME_ELEMENT_H
 
+#include <memory>
 #include "cpputils/graphics/image.h"
 
 class GameElement {
@@ -26,11 +27,11 @@ class GameElement {
   void Helper(graphics::Image &back, std::string &front, int &x_, int &y_);
 
   bool IsOutOfBounds(const graphics::Image &back);
-  bool IntersectsWith(GameElement &game) {
-    return !(x_ > game.GetX() + game.GetWidth() ||
-             game.GetX() > GetX() + GetWidth() ||
-             y_ > game.GetY() + game.GetHeight() ||
-             game.GetY() > GetY() + GetHeight());
+  bool IntersectsWith(GameElement *game) {
+    return !(x_ > game->GetX() + game->GetWidth() ||
+             game->GetX() > GetX() + GetWidth() ||
+             y_ > game->GetY() + game->GetHeight() ||
+             game->GetY() > GetY() + GetHeight());
   }
 
  protected:
@@ -38,7 +39,7 @@ class GameElement {
   int y_;
   int width_;
   int height_;
-  bool is_active;
+  bool is_active = true;
 };
 
 #endif
